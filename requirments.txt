@@ -1,0 +1,8 @@
+argparse
+yaml
+logging
+socket
+subprocess
+concurrent.futures
+ldap3
+colorama
