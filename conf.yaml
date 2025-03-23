@@ -1,0 +1,17 @@
+# Configuration file for ADr3c0n
+
+# LDAP server settings
+server_ip: "192.168.1.1"  # Replace with the IP address of your LDAP server
+username: "your_username" # Replace with your LDAP username
+password: "your_password" # Replace with your LDAP password
+
+# Operations to perform
+list_admins: true    # Set to true to list domain admins
+list_users: true     # Set to true to list all users
+kerberoast: true    # Set to true to perform Kerberoasting
+asrep_roast: true   # Set to true to perform AS-REP Roasting
+host_recon: true     # Set to true to perform host reconnaissance
+
+# Host reconnaissance settings
+# Note: Ensure that `host_recon` is enabled to use these settings
+host_ip: "192.168.1.100"  # Replace with the IP address you want to scan
