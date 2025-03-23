@@ -5,54 +5,23 @@ ADr3c0n is an Active Directory reconnaissance tool designed to help security pro
 
 Features
 
-List Active Directory domain administrators
+- List Active Directory domain administrators
+- Enumerate all users in the Active Directory environment
+- Perform Kerberoasting attacks (future implementation)
+- Perform AS-REP Roasting attacks (future implementation)
+- Conduct host reconnaissance, including ping sweeps, port scanning, and service banner grabbing
+- Configurable via a YAML file for easy customization
 
-Enumerate all users in the Active Directory environment
-
-Perform Kerberoasting attacks (future implementation)
-
-Perform AS-REP Roasting attacks (future implementation)
-
-Conduct host reconnaissance, including ping sweeps, port scanning, and service banner grabbing
-
-Configurable via a YAML file for easy customization
-
-Requirements
-
-Python 3.7+
-
-Required Python Libraries:
-
-argparse
-
-yaml
-
-logging
-
-socket
-
-subprocess
-
-concurrent.futures
-
-ldap3
-
-colorama
-
-To install dependencies, run:
-
-pip install -r requirements.txt
-
-Installation
+----------------------------------------------------------------
+INSTALLATION
 
 Clone the repository:
-
 git clone https://github.com/yourusername/ADr3c0n.git
 cd ADr3c0n
 
 Install dependencies:
-
 pip install -r requirements.txt
+
 
 Configure conf.yaml with your LDAP settings:
 
@@ -73,14 +42,15 @@ host_recon: true     # Set to true to perform host reconnaissance
 # Host reconnaissance settings
 host_ip: "192.168.1.100"  # Replace with the IP address you want to scan
 
+
+
+
 Usage
-
 Run the tool with a configuration file:
-
 python3 ADr3c0n.py --conf conf.yaml
 
-Output Example
 
+Output Example
 Performing Active Directory Recon...
 [+] Domain Admins:
     - Administrator
@@ -94,21 +64,3 @@ Performing Active Directory Recon...
     - Open ports: 80, 445, 3389
     - Port 80 banner: Apache/2.4.41 (Ubuntu)
     - Port 445 banner: Microsoft-DS
-
-Roadmap
-
-Implement Kerberoasting and AS-REP Roasting functionalities
-
-Enhance LDAP enumeration capabilities
-
-Add additional scanning techniques for host reconnaissance
-
-Improve error handling and logging
-
-Disclaimer
-
-This tool is intended for educational and authorized penetration testing purposes only. Unauthorized use of this tool on networks without permission may be illegal. Use responsibly.
-
-License
-
-MIT License
